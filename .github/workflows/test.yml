@@ -35,7 +35,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           $Env:PATH
-          echo '##[add-path]D:\a\setup-al\setup-al\alc\extension\bin\win32'
+          ECHO "D:\a\setup-al\setup-al\alc\extension\bin\win32\" >> $GITHUB_PATH
           $Env:PATH
           alc.exe
           Write-Host "It worked!"
