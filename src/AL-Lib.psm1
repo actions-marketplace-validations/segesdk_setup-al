@@ -6,10 +6,22 @@
 # $CompilerPath = 'C:\Temp\alc\extension\bin\alc.exe'
 
 function Get-Alc {
-	[OutputType([string])]
-	# Download URL for ALC portable:
+    [CmdletBinding()]
+    param (
+        [Parameter()]
+        [string]
+        $version,
+        [Parameter()]
+        [string]
+        $alternativeDownloadUrl
+    )
+    [OutputType([string])]
+    # Download URL for ALC portable:
 	$Url = "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-dynamics-smb/vsextensions/al/9.0.605172/vspackage" 
 
+    if($alternativeDownloadUrl) {
+        $Url = $alternativeDownloadUrl
+    }
 	
 	# Download destination (root of PowerShell script execution path):
 	$DownloadPathDestination = join-path (get-location) "alc"
