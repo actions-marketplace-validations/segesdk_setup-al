@@ -12,7 +12,7 @@ Add the following action to your workflow and use alc.exe through your workflow 
 
 ```yaml
 - name: Setup AL compiler
-  uses: segsedk/setup-al@main
+  uses: segesdk/setup-al@main
   with:
     version: 9.0.605172
 ```
