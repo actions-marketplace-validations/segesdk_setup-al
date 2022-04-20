@@ -11,7 +11,5 @@ $here = Split-Path $MyInvocation.MyCommand.Definition
 $modulePath = Join-Path -Path $here -ChildPath 'AL-Lib.psm1'
 Import-Module $modulePath -Force
 
-$Env:PATH
 $path = (Get-Alc -version $version -alternativeDownloadUrl $alternativeDownloadUrl)[1]
-Write-Host "Path: $path"
 "$path" >> $env:GITHUB_PATH
