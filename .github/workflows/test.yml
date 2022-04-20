@@ -38,7 +38,8 @@ jobs:
           $payload | write-host
           echo "sovs"
           env
-          echo $payload | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8
+          # echo $payload | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8
+          "/d/a/setup-al/setup-al/alc/extension/bin/win32" >> $env:GITHUB_PATH
           env
           .\alc.exe
           Write-Host "It worked!"
