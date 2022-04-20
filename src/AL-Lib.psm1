@@ -1,10 +1,3 @@
-
-
-
-# Copy-Item C:\Temp\*.vsix -Destination C:\Temp\alc.zip
-# Expand-Archive C:\Temp\alc.zip -DesintationPath C:\Temp\alc -Force
-# $CompilerPath = 'C:\Temp\alc\extension\bin\alc.exe'
-
 function Get-Alc {
     [CmdletBinding()]
     param (
@@ -17,7 +10,7 @@ function Get-Alc {
     )
     [OutputType([string])]
     # Download URL for ALC portable:
-	$Url = "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-dynamics-smb/vsextensions/al/9.0.605172/vspackage" 
+	$Url = "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-dynamics-smb/vsextensions/al/$version/vspackage" 
 
     if($alternativeDownloadUrl) {
         $Url = $alternativeDownloadUrl
@@ -44,9 +37,8 @@ function Get-Alc {
     Expand-Archive -Path $DownloadZipDestination -DestinationPath $DownloadPathDestination
     Remove-Item $DownloadZipDestination
 
-	$alcPath = join-path $DownloadPathDestination "extension\bin\win32\"
-	write-host "path: $alcPath"
-	return $alcPath
+    $alcPath = join-path $DownloadPathDestination "extension\bin\win32\"
+    return $alcPath
 }
 
 Export-ModuleMember -Function Get-Alc
