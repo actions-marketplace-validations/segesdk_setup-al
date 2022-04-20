@@ -5,7 +5,7 @@ inputs:
   Version:  # current scope to render the variables for
     description: 'Current version of the extension. E.g. 9.0.605172'
     required: true
- outputs:
+outputs:
   random-number:
     description: "Random number"
     value: ${{ steps.random-number-generator.outputs.random-id }}
