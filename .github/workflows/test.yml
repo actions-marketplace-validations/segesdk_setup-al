@@ -32,11 +32,11 @@ jobs:
           version: 9.0.605172
           alternativeDownloadUrl: ${{secrets.ALTERNATIVEDOWNLOADURL }}
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: Use AL compiler
         run: |
           echo "$PATH"
           get-childitem "D:\a\setup-al\setup-al\alc\extension\bin\win32"
           ECHO "D:\a\setup-al\setup-al\alc\extension\bin\win32\" >> $GITHUB_PATH
           echo "$PATH"
-          alc.exe
+          .\alc.exe
           Write-Host "It worked!"
