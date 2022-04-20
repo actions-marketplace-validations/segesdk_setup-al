@@ -34,9 +34,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Use AL compiler
         run: |
-          echo "$PATH"
           get-childitem "D:\a\setup-al\setup-al\alc\extension\bin\win32"
-          ECHO "D:\a\setup-al\setup-al\alc\extension\bin\win32\" >> $GITHUB_PATH
-          echo "$PATH"
+          echo "D:\a\setup-al\setup-al\alc\extension\bin\win32\" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
           .\alc.exe
           Write-Host "It worked!"
