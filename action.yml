@@ -1,0 +1,17 @@
+
+name: 'setup-al'
+description: 'Download AL-Language vscode extention and setup path to alc in PATH.'
+inputs:
+  Version:  # current scope to render the variables for
+    description: 'Current version of the extension. E.g. 9.0.605172'
+    required: true
+ outputs:
+  random-number:
+    description: "Random number"
+    value: ${{ steps.random-number-generator.outputs.random-id }}
+runs:
+  using: "composite"
+  steps:
+    - run: |
+        ${{ github.action_path }}/src/Setup-AL.ps1 -version ${{inputs.version}}
+      shell: pwsh
