@@ -34,16 +34,6 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Use AL compiler
         run: |
-          # $payload = "PATH=/d/a/setup-al/setup-al/alc/extension/bin/win32"
-          # $payload | write-host
-          # echo "sovs"
-          # env
-          # # echo $payload | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8
-          # "D:\a\setup-al\setup-al\alc\extension\bin\win32" >> $env:GITHUB_PATH
-          # env
-          
+          alc.exe -?           
           # Write-Host "It worked!"
-      - name: use alc
-        run: |
-          env
-          alc.exe
+
