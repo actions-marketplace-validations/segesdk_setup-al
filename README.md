@@ -8,7 +8,10 @@ This GitHub Action will:
 
 # Getting started
 
-Add the following action to your workflow and use alc.exe through your workflow job. The action takes a single parameter version, specifying the desired version to install. See https://marketplace.visualstudio.com/items?itemName=ms-dynamics-smb.al for version history
+Add the following action to your workflow and use alc.exe through your workflow job. The action can take 2 parameters
+
+1. version: specifying the desired version to install from Visual Studio Code marketplace. E.g. 9.0.605172. See https://marketplace.visualstudio.com/items?itemName=ms-dynamics-smb.al for version history
+2. alternativeDownloadUrl: you can specify your own alternative download url, for self hosting the binaries and circumventing the rate limit policy on vscode marketplace. See https://go.microsoft.com/fwlink/?LinkId=823950
 
 ```yaml
 - name: Setup AL compiler
