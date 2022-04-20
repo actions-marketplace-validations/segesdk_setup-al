@@ -27,7 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Setup AL compiler
-        uses: segsedk/setup-al@main
+        uses: segesdk/setup-al@main
         with:
           version: 9.0.605172
       # Runs a set of commands using the runners shell
