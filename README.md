@@ -15,12 +15,12 @@ Add the following action to your workflow and use alc.exe through your workflow 
 
 ```yaml
 - name: Setup AL compiler
-  uses: segesdk/setup-al@main
+  uses: segesdk/setup-al@3454bb07d3c88bdee2ef90ed5ee572e5ea1560d3
   with:
     version: 9.0.605172
 ```
 *Note: best practice is to always review the code for latest commit and only reference the action with a SHA and not a version. This ensures that the contributors cannot alter the code running in your pipelines. E.g.*
-```uses: segesdk/setup-al@af23c814804b5b79c22033f94d8949169ccf6ea5```
+```uses: segesdk/setup-al@3454bb07d3c88bdee2ef90ed5ee572e5ea1560d3```
  
 
 # Status
