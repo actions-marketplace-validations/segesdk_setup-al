@@ -1,4 +1,10 @@
 
+author: "jnus"
+
+branding:
+  icon: "box"
+  color: "green"
+
 name: 'setup-al'
 description: 'Download AL-Language vscode extention and setup path to alc in PATH.'
 inputs:
