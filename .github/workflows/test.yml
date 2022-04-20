@@ -36,5 +36,5 @@ jobs:
         run: |
           get-childitem "D:\a\setup-al\setup-al\alc\extension\bin\win32"
           echo "D:\a\setup-al\setup-al\alc\extension\bin\win32\" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
-          .\alc.exe
+          alc.exe
           Write-Host "It worked!"
